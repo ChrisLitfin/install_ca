@@ -72,4 +72,4 @@ The function then fires $OSdist and $OSname through a bunch of nested case state
   <tr><th>$installString<th>String<th>Dtermines what to prefix the various "install" commands with (i.e. what package manager to use, and with what options.
 </table>
     
-If you want to add a new OS, run the lsb_release commands shown above and see what you get, then add to the case statements accordingly. <b>IMPORTANT:</b> Note that you MUST specify an $installString for each $OSdist, and that each case statement must have a * case that calls unknownOS so that thes script aborts if the OS is not on the list.
+If you want to add a new OS, run the lsb_release commands shown above and see what you get, then add to the case statements accordingly. <b>IMPORTANT:</b> Note that you MUST specify an $installString for each $OSdist, and that each case statement must have a * case that calls unknownOS so that thes script aborts if the OS is not on the list. A guide to working with bash case statements can be found here: <a href=http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_03.html>tldp.org Using Case Statements - Bash</a>
