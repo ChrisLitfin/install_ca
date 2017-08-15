@@ -27,9 +27,10 @@ Beyond that, this script assumes the following:
 <h2>Running This Script</h2>
 
 To run this script, open a terminal and run the following two lines:
-<table border=1
-<code>git clone https://github.com/ChrisLitfin/install_ca
+<table border=1>
+<tr><th><code>git clone https://github.com/ChrisLitfin/install_ca
   sudo bash install_ca/install_ca.sh -f</code>
+</table>
 
 <h2>Operating System Compatibility</h2>
 
