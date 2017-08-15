@@ -111,17 +111,18 @@ echo $out
 echo "" > /dev/tty
 }
 
-#determines Linux distro and version and sets stuff up accordingly
+#determines OS distro and version and sets stuff up accordingly
 getOSInfo(){
 
 	#set variables to 0
-	use_dotdeb=0
-	use_debmm=0
-	use_raspbian_stretch=0
+
 	OSdist=""
 	OSname=""
+
+	use_dotdeb=0
+	use_debmm=0
 	installString=""
-	php7_install_opt=""
+
 
 	#check if lsb_release works; if not, install it using a brute-force method
 	#(it's a catch-22 here; we need lsb_release to determine the os 
@@ -243,9 +244,9 @@ done
 
 echo -e "\e[1;4;45mCollectiveAccess BASH SETUP SCRIPT v0.5.0\e[0m"
 
-echo -e "Welcome to the bash setup script for Collective Access. \nThis script will install and configure all the files and software dependancies need to run a Linux-based webserver for the current versions of CollectiveAccess Providence 1 and Pawtucket 2. \nThis process may take several hours. \n\n Specifically, this script will install and configure the following: \n -- All currently-available updates for pre-installed packages \n -- Apache 2 webserver \n -- php 7.0 with all the nescessary supporting packages \n -- The image- and document-handling packages GraphicsMagick, GMagick, GhostScript, DCraw, LibreOffice, Poppler-Utils (PdfToText), MediaInfo, WkHtmlToText, OpenCTM, PdfMiner, and ExifTool \n -- [IF SELECTED with -f flag] The audio- and video-handling package ffmpeg (which has to be built), along with its numerous dependancies \n -- The database server MySQL (or MariaDB, depending on which OS you are running)\n -- The current version of CollectiveAccess Providence 1 \n -- The current version of CollectiveAccess Pawtucket 2 \n\n Beyond that, this script assumes the following: \n -- There is nothing installed on this server already \n -- That you are currently logged in as the user under which you want to install things \n -- That you are running this script as sudo \n -- That you are running this script in a terminal window, rather than at the command prompt (causes some text do disappear)\n\n If any of this is not true, ABORT NOW or risk bricking your computer.\n"
+echo -e "Welcome to the bash setup script for Collective Access. \nThis script will install and configure all the files and software dependancies need to run a Linux-based webserver for the current versions of CollectiveAccess Providence 1 and Pawtucket 2. \nThis process may take several hours."
 
-echo -e "\e[37;41mPLEASE NOTE THAT THIS SCRIPT IS PROVIDED COMPLETELY AS-IS, WITH ABSOLUTELY NO GUARANTEES EXPRESSED OR IMPLIED.\e[0m\n"
+echo -e "\e[37;41mPLEASE NOTE THAT THIS SCRIPT IS PROVIDED COMPLETELY AS-IS, WITH ABSOLUTELY NO GUARANTEES EXPRESSED OR IMPLIED.\n\n FOR MORE INFORMATION ON WHAT EXACTLY THIS SCRIPT WILL DO, SEE THE README.md FILE IN THE GITHUB REPOSITORY.\e[0m\n"
 
 echo -e "\e[1;91m Having read the above description, do you wish to proceed with the installation?\e[0m \nType option number, [Enter] to confirm: "
 
