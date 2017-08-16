@@ -313,7 +313,7 @@ select yna in "Yes" "No" "Abort"; do
 done
 
 #####################################################################################################################################
-:<<'STARTSCRIPT'
+
 # [Step 1] add additional apt package servers
 echo -e "\e[1;4;45mStep 1: Add additional package servers to apt sources.list\e[0m"
 echo -e "Step started at "$(timestamp)"."
@@ -442,7 +442,7 @@ echo -e "\e[1;42mFinished Step 5.\e[0m"
 echo -e ''
 
 #####################################################################################################################################
-STARTSCRIPT
+
 # [Step 6] Install git, graphicsMagick, GMagick, GhostScript, DCraw, LibreOffice, Poppler-Utils (PdfToText), MediaInfo, WkHtmlToText, OpenCTM, PdfMiner, ExifTool, 
 echo -e "\e[1;4;45mStep 6: Install CollectiveAccess image-handling packages\e[0m"
 echo -e "Step started at "$(timestamp)"."
