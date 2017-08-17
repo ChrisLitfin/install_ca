@@ -31,7 +31,7 @@ To run this script, open a terminal and copy and paste the following code (paste
 <tr><th><code>sudo git clone https://github.com/ChrisLitfin/install_ca;sudo bash install_ca/install_ca.sh -f</code>
 </table>
 
-Note: Sometimes part of the script will fail, particularly during Step 7. The rset of the script SHOULD continue, and if you still are given a CollectiveAccess installer screen at the end of the script, the rest of the script worked fine. If that is the case, simply run "sudo bash install_ca/install_ca.sh" to run the script again. Give the same answers to the four input prompts as you did the first time, and the script will attempt to re-install the broken packages. <b>The script will not modify any exisiting working settings.</b>
+<b>Note: </b>Sometimes part of the script will fail, particularly during Step 7. The rset of the script SHOULD continue, and if you still are given a CollectiveAccess installer screen at the end of the script, the rest of the script worked fine. If that is the case, simply run "sudo bash install_ca/install_ca.sh" to run the script again. Give the same answers to the four input prompts as you did the first time, and the script will attempt to re-install the broken packages. <b>As long as you neter the same information at ht eprompts, re-running the script will not modify any exisiting working settings.</b>
 
 <h2>Operating System Compatibility</h2>
 
