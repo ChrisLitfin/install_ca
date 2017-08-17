@@ -93,3 +93,21 @@ There is currently no official Raspbian stretch image, so the only way to get Ra
 <ol><li>Install Raspbian jessie in the usual way, i.e. following the instructions at <a href=https://www.raspberrypi.org/documentation/installation/installing-images/README.md>raspberrypi.org</a>
 <li>Boot up and run Raspbian jessie. (The default username is "pi" and the default password is "raspberry". It is recommended that you DO NOT change this until after the upgrade process is complete.)
 <li>Open a Terminal window (there's a button in the top menu bar) and run "sudo rpi-update"
+<li>Once the updater is done, reboot the pi by running "sudo reboot", then log back in if prompted after reboot.
+<li>Repeat Steps 3 and 4 until you get a message saying "Your firmware is already up to date".
+<li>Edit your apt repo locations by the following process:
+<ol><li>In a teminal window, run "sudo nano /etc/apt/sources.list" to open sources.list in a text editor.
+<li>Replace all instances of the word "jessie" with the word "stretch". (You can do this quickly by using the built-in replace feature. Use the following keyboard commands: [ctrl]+[w], [ctrl]+[r}, "jessie", [enter], "stretch", [enter].)
+<li>Save and close the text editor using the following keyboard commands: [ctrl]+[x], [y], [enter].
+<li>In a teminal window, run "sudo nano /etc/apt/sources.list.d/raspi.list" to open raspi.list in a text editor.
+<li>Replace all instances of the word "jessie" with the word "stretch". (You can do this quickly by using the built-in replace feature. Use the following keyboard commands: [ctrl]+[w], [ctrl]+[r}, "jessie", [enter], "stretch", [enter].)
+<li>Save and close the text editor using the following keyboard commands: [ctrl]+[x], [y], [enter].</ol>
+<li>Run "sudo apt-get update"
+<li>Run "sudo apt-get -y dist-upgrade". <b>CAUTION: This process takes a LONG time and uses a LOT of internet. CAUTION #2: There will be prompts during this process. Type "y" for yes/no questions and "q" for information prompts.</b>
+<li>Once the updater is done, reboot the pi by running "sudo reboot", then log back in if prompted after reboot.
+<li>Repeat Steps 7 -9 until you see a message that says "0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded."
+<li>Once again, run "sudo rpi-update"
+<li>Once the updater is done, reboot the pi by running "sudo reboot", then log back in if prompted after reboot.
+<li>Repeat Steps 11 and 12 until you get a message saying "Your firmware is already up to date".
+<li><b>You are now ready to run install_ca.sh to install COllectiveAccess</b>.
+
