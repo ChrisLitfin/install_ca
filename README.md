@@ -54,7 +54,7 @@ This Script has been tested successfully on the following Operating Systems and 
         </ul>
       <li>Raspbian
         <ul>
-          <li> Raspbian 9 stretch: armhf
+          <li> Raspbian 9 stretch: armhf (See Raspbian Notes, below)
         </ul>
       </ul>
     </ul>
@@ -65,7 +65,7 @@ Other Operating System/Architecture combinations may or may not work as well. Op
  
 <b>The following Operating System/Architecture combinations are known not to work (reason in brackets):</b>
 <ul>
-  <li>Raspbioan 8 jessie: armhf (lack of a good source for php7-* packages, among others)
+  <li>Raspbioan 8 jessie: armhf (lack of a good source for php7-* packages, among others - See Raspbian Notes, below)
 </ul>
 
 
@@ -82,3 +82,14 @@ The function then fires $OSdist and $OSname through a bunch of nested case state
 </table>
     
 If you want to add a new OS, run the lsb_release commands shown above and see what you get, then add to the case statements accordingly. <b>IMPORTANT:</b> Note that you MUST specify an $installString for each $OSdist, and that each case statement must have a * case that calls unknownOS so that thes script aborts if the OS is not on the list. A guide to working with bash case statements can be found here: <a href=http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_03.html>tldp.org Using Case Statements - Bash</a>
+
+<h2>Raspbian Notes</h2>
+Raspbian is a Debain based Operating system that uses a modified Linux kernel, specifically designed for the armhf architecture and system-on-a-chip of the Raspberry Pi. Due to the specifics of the Pi, the current "vanilla" Linux distros cannot, for the msot part, run on it, although much effort is being put into integrating the nescessary changes into the vanilla kernel so a Pi-specific OS is no longer required.
+
+The current version of Raspbian, Raspbian jessie, is based off of Debian 8 jessie. Because of this, since Debian 8 jessie has no "official" PHP7 support, neither does Raspbian jessie. The usual PHP7 repo for Debian 8 jessie, does not support the armhf architecture. While there are some repos that do purport to support PHP7 for Debian 8 jessie on the armhf architecture, they seem to be somewhat flaky and unreliable. Therefore, the preferred solution is to update Raspian to Raspbian stretch, which DOES have "official" PHP7 support. 
+
+There is currently no official Raspbian stretch image, so the only way to get Raspbian stretch is to upgrade from Raspbian jessie. This is a relatively simple, though long process. The steps to do this are as follows:
+
+<ol><li>Install Raspbian jessie in the usual way, i.e. following the instructions at <a href=https://www.raspberrypi.org/documentation/installation/installing-images/README.md>raspberrypi.org</a>
+<li>Boot up and run Raspbian jessie. (The default username is "pi" and the default password is "raspberry". It is recommended that you DO NOT change this until after the upgrade process is complete.)
+<li>Open a Terminal window (there's a button in the top menu bar) and run "sudo rpi-update"
