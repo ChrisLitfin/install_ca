@@ -1,10 +1,11 @@
 # install_ca
 
-v0.7.0
+v0.7.4
 
 
 An installation script for a basic installation of CollectiveAccess (currently Linux-only)
 
+If you want to do this manually, see install_ca_manual.rtf
 
 This script will install and configure all the files and software dependencies need to run a Linux-based webserver for the current versions of CollectiveAccess Providence 1 and Pawtucket 2. This process may take a long time, and will use a LOT (several gigabytes; we're installing and updating a lot of packages) of internet. You may want to get a book. And unlimited internet.
 
