@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #See information below at [Step 0]...
 #####################################################################################################################################
 # HELPER FUNCTIONS TO DO VARIOUS THINGS NON-REPETITIVELY
