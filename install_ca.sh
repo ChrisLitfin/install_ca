@@ -198,7 +198,7 @@ esac
 done
 #####################################################################################################################################
 # [Step 0] Introductory stuff
-echo -e "\e[1;4;45mCollectiveAccess BASH SETUP SCRIPT v0.7.0\e[0m"
+echo -e "\e[1;4;45mCollectiveAccess BASH SETUP SCRIPT v0.7.1\e[0m"
 echo -e "Welcome to the bash setup script for Collective Access. \nThis script will install and configure all the files and software dependancies need to run a Linux-based webserver for the current versions of CollectiveAccess Providence 1 and Pawtucket 2. \nThis process may take several hours."
 echo -e "\e[37;41mPLEASE NOTE THAT THIS SCRIPT IS PROVIDED COMPLETELY AS-IS, WITH ABSOLUTELY NO GUARANTEES EXPRESSED OR IMPLIED.\n\n FOR MORE INFORMATION ON WHAT EXACTLY THIS SCRIPT WILL DO, SEE THE README.md FILE IN THE GITHUB REPOSITORY.\e[0m\n"
 echo -e "\e[1;91m Having read the above description, do you wish to proceed with the installation?\e[0m \nType option number, [Enter] to confirm: "
