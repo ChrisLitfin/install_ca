@@ -242,7 +242,7 @@ done
 
 # [Step 0] Introductory stuff
 
-echo -e "\e[1;4;45mCollectiveAccess BASH SETUP SCRIPT v0.7.3\e[0m"
+echo -e "\e[1;4;45mCollectiveAccess BASH SETUP SCRIPT v0.7.4\e[0m"
 
 echo -e "Welcome to the bash setup script for Collective Access. \nThis script will install and configure all the files and software dependancies need to run a Linux-based webserver for the current versions of CollectiveAccess Providence 1 and Pawtucket 2. \nThis process may take several hours."
 
