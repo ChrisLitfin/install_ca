@@ -32,7 +32,10 @@ Beyond that, this script assumes the following:
 
 To run this script, open a terminal and copy and paste the following code (paste in terminal is <ctrl>+<shift>+<v>):
 <table border=1>
-<tr><th><code>sudo git clone https://github.com/ChrisLitfin/install_ca;sudo bash install_ca/install_ca.sh -f</code>
+<tr><th><code>
+  sudo apt-get install -y git
+  sudo git clone https://github.com/ChrisLitfin/install_ca
+  sudo bash install_ca/install_ca.sh -f</code>
 </table>
 
 <b>Note: </b>Sometimes part of the script will fail, particularly during Step 7. The rest of the script SHOULD continue, and if you still are given a CollectiveAccess installer screen at the end of the script, the rest of the script worked fine. If that is the case, simply run "sudo bash install_ca/install_ca.sh" to run the script again. Give the same answers to the four input prompts as you did the first time, and the script will attempt to re-install the broken packages. <b>As long as you enter the same information at the prompts, re-running the script *should* not modify any existing working settings.</b>
