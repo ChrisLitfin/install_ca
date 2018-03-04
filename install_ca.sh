@@ -420,8 +420,6 @@ perl -pi -e "s/upload_max_filesize = 2M/upload_max_filesize = 32M/" /etc/php/7.0
 perl -pi -e "s/memory_limit = 128M/memory_limit = 256M/" /etc/php/7.0/apache2/php.ini
 perl -pi -e "s/display_errors = Off/display_errors = On/" /etc/php/7.0/apache2/php.ini
 
-echo -e "; configuration for php gmagick module\n; Added by CollectiveAccess Installer\n; priority=20\nextension=gmagick.so" > /etc/php/7.0/apache2/conf.d/20-gmagick.ini
-
 echo -e "Updating Apache dir.conf to serve index.php first..."
 perl -pi -e "s/index.pl index.php/index.pl/" /etc/apache2/mods-enabled/dir.conf
 perl -pi -e "s/index.html/index.php index.html/" /etc/apache2/mods-enabled/dir.conf
@@ -444,6 +442,8 @@ $installString -y install git php-pear liblzma5 liblzma-dev libtiff-dev graphics
 
 pecl channel-update pecl.php.net
 printf '\n' | pecl install gmagick-2.0.4RC1
+#Add extension iformation for php gmagick module
+echo -e "; configuration for php gmagick module\n; Added by CollectiveAccess Installer\n; priority=20\nextension=gmagick.so" > /etc/php/7.0/apache2/conf.d/20-gmagick.ini
 
 pip install pdfminer
 
@@ -546,7 +546,8 @@ then
 	rm /var/www/html/index.php
 fi
 
-rm /var/www/html/index.html
+rm /var/www/html/
+
 
 echo -e "Downloading CollectiveAccess - Providence files from github..."
 git clone https://github.com/collectiveaccess/providence.git /var/www/html/staff
