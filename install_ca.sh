@@ -451,7 +451,6 @@ echo -e "Updating external_applications.conf..."
 perl -pi -e "s{/usr/bin/pdf2txt.py}{/usr/local/bin/pdf2txt.py}" /var/www/html/staff/app/conf/external_applications.conf
 perl -pi -e "s{/usr/bin/exiftool}{/usr/local/bin/exiftool}" /var/www/html/staff/app/conf/external_applications.conf
 perl -pi -e "s{/usr/local/bin/wkhtmltopdf}{/usr/bin/wkhtmltopdf}" /var/www/html/staff/app/conf/external_applications.conf
-perl -pi -e "s{/usr/bin/ffmpeg}{/usr/local/bin/ffmpeg}" /var/www/html/staff/app/conf/external_applications.conf
 echo -e "Done."
 echo -e "\e[1;42mFinished Step 10.\e[0m"
 echo -e ''
@@ -477,7 +476,6 @@ echo -e "Updating external_applications.conf..."
 perl -pi -e "s{/usr/bin/pdf2txt.py}{/usr/local/bin/pdf2txt.py}" /var/www/html/app/conf/external_applications.conf
 perl -pi -e "s{/usr/bin/exiftool}{/usr/local/bin/exiftool}" /var/www/html/app/conf/external_applications.conf
 perl -pi -e "s{/usr/local/bin/wkhtmltopdf}{/usr/bin/wkhtmltopdf}" /var/www/html/app/conf/external_applications.conf
-perl -pi -e "s{/usr/bin/ffmpeg}{/usr/local/bin/ffmpeg}" /var/www/html/app/conf/external_applications.conf
 echo -e "Done."
 echo -e "\e[1;42mFinished Step 11.\e[0m"
 echo -e ''
