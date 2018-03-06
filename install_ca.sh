@@ -499,7 +499,7 @@ debconf-set-selections <<< "mysql-server mysql-server/root_password password $db
 debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $dbtemprootpw"
 $installString -y install mysql-server 
 
-mysql_install_db
+mysql_install_db --defaults-file=~/.my.cnf
 
 #equivalent to running mysql_secure_installation
 mysql -uroot -p${dbtemprootpw} -e "DELETE FROM mysql.user WHERE User='';"
