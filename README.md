@@ -35,7 +35,13 @@ To run this script, open a terminal and copy and paste the following code (paste
 <table border=1>
 <tr><th><code>
   sudo apt-get install -y git
+</table>
+<table border=1>
+  <tr><th><code>
   sudo git clone https://github.com/ChrisLitfin/install_ca
+</table>
+<table border=1>
+<tr><th><code>
   sudo bash install_ca/install_ca.sh -f</code>
 </table>
 
