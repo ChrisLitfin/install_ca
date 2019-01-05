@@ -410,7 +410,7 @@ echo -e ''
 echo -e "\e[1;4;45mStep 5: Install php7\e[0m"
 echo -e "Step started at "$(timestamp)"."
 
-$installString -y install  php7.0 php7.0-gd libapache2-mod-php7.0 php7.0-mcrypt php7.0-curl php7.0-dev
+$installString -y install  php7.0 php7.0-gd libapache2-mod-php7.0 php7.0-mcrypt php7.0-curl php7.0-dev php7.0-zip
 
 echo -e "Copying current php.ini to "$(timestamp)"-php.ini.old..."
 cp "/etc/php/7.0/apache2/php.ini" "/etc/php/7.0/apache2/"$(timestamp)"-sources.list.old"
