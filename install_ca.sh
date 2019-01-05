@@ -614,17 +614,18 @@ echo -e "Fixing filesystem structure and permissions..."
 ln -s /var/www/html/staff/media /var/www/html/media
 
 mkdir /var/www/html/staff/media
+mkdir /var/www/html/staff/media/$(caident)
 
 chmod a+w /var/www/html/staff/app/tmp
 chmod a+w /var/www/html/staff/app/log
 chmod a+w /var/www/html/staff
 chmod a+w /var/www/html/staff/media
-chmod a+w /var/www/html/staff/media/collectiveaccess
+chmod a+w /var/www/html/staff/media/$(caident)
 chmod a+w /var/www/html/staff/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer
 
 chmod a+w /var/www/html/app/tmp 
 chmod a+w /var/www/html/media
-chmod a+w /var/www/html/media/collectiveaccess
+chmod a+w /var/www/html/media/$(caident)
 chmod a+w /var/www/html/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer
 
 echo -e "Done."
